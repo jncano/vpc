@@ -38,7 +38,9 @@ One or more subnets are using the address prefix. You must detach all the subnet
 ## backend_service_unavailable
 **Message**: Backend service unavailable.
 
-A backend cloud service failed to respond. One cause for receiving this error could be a missing or expired IAM token. Try again in a few minutes. If this problem persists, [contact support](getting-help.html).
+A backend cloud service failed to respond. One cause for receiving this error could be a missing or expired IAM token. Re try creating new VPC in a few minutes.
+
+If this problem persists, [contact support](getting-help.html).
 
 ## bad_field
 **Message**: Correct instance UUID should be provided
@@ -64,7 +66,7 @@ You may see this error message when the default address prefix is not found.
 ## duplicate_error
 **Message**: The input provided already exists.
 
-The resource you've specified already exists.
+The resource specified in the request already exists. Select another value. The input provided already exists.
 
 ## floating_ip_in_use
 **Message**: The floating IP is in use.
@@ -358,7 +360,7 @@ For further instructions to fix this problem, refer to the [API documentation](a
 ## missing_version
 **Message**: The `version` parameter is required and must be in the form of `YYYY-MM-DD`.
 
-The version parameter must be present in the URL.
+In order to make a succesful call, the version parameter must be present in the URL.
 
 ## network_conflict
 **Message**: None
@@ -449,7 +451,7 @@ The public gateway currently is attached to one or more subnets. You must detach
 ## rate_limit_exceeded
 **Message**: Too many requests
 
-This message is returned if there are too many requests within a specified time interval.
+There is a limited number of request that can be made. Too many requests have been made within the time interval. Wait a while and try again. 
 
 ## security_group_active_transactions
 **Message**: The interface cannot be attached or detached until the instance appears in Active state.
