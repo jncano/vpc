@@ -98,7 +98,7 @@ For further instructions to fix this problem, refer to the [API documentation](a
 ## iam_failure
 **Message**: None
 
-This message can be displayed when there's been a failure to convert an IAM token to an IMS token.  It may mean that the token you provided is not supported, or there is an invalid key ID. If this problem persists, [contact support](getting-help.html).
+A failure occurred in the IAM service verifying authentication or authorization. This may be a temporary outage of the IAM service. Retry request after few minutes. If this problem persists, contact support.
 
 
 ## ike_policies_quota_exceeded1
@@ -133,10 +133,11 @@ You might get this error if you attempt to create a subnet and the subnet cannot
 
 ## internal_server_error
 **Message**: None
+	Message: None
 
-You might receive this error if the system is unable to provision your VSI, storage volume, or other resources. Try again in a few minutes. 
-
-For further instructions to fix this problem, refer to the [API documentation](api-doc-wrapper.html){: new_window}. If this problem persists, [contact support](getting-help.html).
+This error occurs when the service encounters an unexpected error. This may be a temporary problem. Try the request again in a few minutes. 
+	
+If this problem persists, contact support.
 
 ## invalid_id_format
 **Message**: Bad ID format. Ensure format is correct.
@@ -370,9 +371,7 @@ You might see this message if you supply a network CIDR that conflicts with an e
 ## not_authorized                               
 **Message**: The request is not authorized.
 
-A common reason you may see this error is if your IAM token is missing or expired. If so, you may need to check your permissions and contact your administrator. 
-
-For further instructions to fix this problem, refer to the [API documentation](api-doc-wrapper.html){: new_window}. If this problem persists, [contact support](getting-help.html).
+A common reason you may see this error is if your IAM token is missing or expired. For how to generate a token, refer to [Creating a VPC using the REST APIs](https://console.bluemix.net/docs/infrastructure/vpc/example-code.html#creating-a-vpc-using-the-rest-apis). If token is not expired, you may need to check your permissions and contact your administrator. 
 
 ## not_found
 **Message**: Please check whether the resource you are requesting exists.
