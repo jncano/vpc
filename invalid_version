@@ -64,8 +64,7 @@ You may see this error message when the default address prefix is not found.
 ## duplicate_error
 **Message**: The input provided already exists.
 
-The resource you've specified already exists. To address this issue, use a different name for the resource you want to create. For example, when creating a new VPC,  first call get VPC using id `GET "/v1/vpcs/{id}” 	-H  "accept: application/json"`, review list of names for the VPCs already created and choose a name that does not conflict. 
-
+The resource you've specified already exists. To address this issue, use a different name for the resource you want to create. For example, when creating a new VPC,  first call get VPC using id `GET "/v1/vpcs/{id}” 	-H  "accept: application/json"`, review list of names for the VPCs already created and choose a name that does not conflict.
 
 ## floating_ip_in_use
 **Message**: The floating IP is in use.
