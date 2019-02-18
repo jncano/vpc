@@ -66,7 +66,7 @@ You may see this error message when the default address prefix is not found.
 ## duplicate_error
 **Message**: The input provided already exists.
 
-The resource specified in the request already exists. Select another value. The input provided already exists.
+The resource you've specified already exists. To address this issue, use a different name for the resource you want to create. For example, when creating a new VPC,  first call get VPC using id `GET "/v1/vpcs/{id}”`, review list of names for the VPCs already created and choose a name that is unique. 
 
 ## floating_ip_in_use
 **Message**: The floating IP is in use.
@@ -161,12 +161,12 @@ For further instructions to fix this problem, refer to the [API documentation](a
 ## invalid_version
 **Message**: The `version` is invalid, it must be in the form of `YYYY-MM-DD`.
 
-The version must comply with the format `YYYY-MM-DD`. For single-digit months or dates, such as January 1st, the version should look like `2019-01-01`.
+The version must comply with the format YYYY-MM-DD. For single-digit months or dates, such as January 1st, the version should look like 2019-01-01.The version parameter must be present in the URL. The version must 	be after 2019-01-01 and before the current date. For example, to get list VPCs, append the version at the end of the request `GET "/v1/vpcs?version=2019-01-01”`
 
 ## invalid_version_range
 **Message**: The `version` cannot be set at a future date nor before `2019-01-01`.
 
-The version must be after `2019-01-01` and before the current date.
+The version must comply with the format YYYY-MM-DD. For single-digit months or dates, such as January 1st, the version should look like 2019-01-01.The version parameter must be present in the URL. The version must 	be after 2019-01-01 and before the current date. For example, to get list VPCs, append the version at the end of the request `GET "/v1/vpcs?version=2019-01-01”`
 
 ## invalid_zone
 **Message**: Please check whether the resources you are requesting are in the same zone.
@@ -360,7 +360,7 @@ For further instructions to fix this problem, refer to the [API documentation](a
 ## missing_version
 **Message**: The `version` parameter is required and must be in the form of `YYYY-MM-DD`.
 
-In order to make a succesful call, the version parameter must be present in the URL.
+The version must comply with the format YYYY-MM-DD. For single-digit months or dates, such as January 1st, the version should look like 2019-01-01.The version parameter must be present in the URL. The version must 	be after 2019-01-01 and before the current date. For example, to get list VPCs, append the version at the end of the request `GET "/v1/vpcs?version=2019-01-01”`
 
 ## network_conflict
 **Message**: None
