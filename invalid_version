@@ -64,7 +64,8 @@ You may see this error message when the default address prefix is not found.
 ## duplicate_error
 **Message**: The input provided already exists.
 
-The resource you've specified already exists.
+The resource you've specified already exists. To address this issue, use a different name for the resource you want to create. For example, when creating a new VPC,  first call get VPC using id `GET "/v1/vpcs/{id}” 	-H  "accept: application/json"`, review list of names for the VPCs already created and choose a name that does not conflict. 
+
 
 ## floating_ip_in_use
 **Message**: The floating IP is in use.
@@ -96,7 +97,7 @@ For further instructions to fix this problem, refer to the [API documentation](a
 ## iam_failure
 **Message**: None
 
-This message can be displayed when there's been a failure to convert an IAM token to an IMS token.  It may mean that the token you provided is not supported, or there is an invalid key ID. If this problem persists, [contact support](getting-help.html).
+A failure occurred in the IAM service verifying authentication or authorization. This may be a temporary outage of the IAM service. Retry request after few minutes. If this problem persists, contact support.
 
 
 ## ike_policies_quota_exceeded1
@@ -132,7 +133,7 @@ You might get this error if you attempt to create a subnet and the subnet cannot
 ## internal_server_error
 **Message**: None
 
-You might receive this error if the system is unable to provision your VSI, storage volume, or other resources. Try again in a few minutes. 
+This error occurs when the service encounters an unexpected error. This may be a temporary problem. Try the request again in a few minutes.
 
 For further instructions to fix this problem, refer to the [API documentation](api-doc-wrapper.html){: new_window}. If this problem persists, [contact support](getting-help.html).
 
@@ -159,12 +160,12 @@ For further instructions to fix this problem, refer to the [API documentation](a
 ## invalid_version
 **Message**: The `version` is invalid, it must be in the form of `YYYY-MM-DD`.
 
-The version must comply with the format `YYYY-MM-DD`. For single-digit months or dates, such as January 1st, the version should look like `2019-01-01`.
+The version must comply with the format YYYY-MM-DD. For single-digit months or dates, such as January 1st, the version should look like 2019-01-01.The version parameter must be present in the URL. The version must 	be after 2019-01-01 and before the current date. For example, to get list VPCs, append the version at the end of the request `GET "/v1/vpcs?version=2019-01-01”`
 
 ## invalid_version_range
 **Message**: The `version` cannot be set at a future date nor before `2019-01-01`.
 
-The version must be after `2019-01-01` and before the current date.
+The version must comply with the format YYYY-MM-DD. For single-digit months or dates, such as January 1st, the version should look like 2019-01-01.The version parameter must be present in the URL. The version must 	be after 2019-01-01 and before the current date. For example, to get list VPCs, append the version at the end of the request `GET "/v1/vpcs?version=2019-01-01”`
 
 ## invalid_zone
 **Message**: Please check whether the resources you are requesting are in the same zone.
@@ -358,7 +359,7 @@ For further instructions to fix this problem, refer to the [API documentation](a
 ## missing_version
 **Message**: The `version` parameter is required and must be in the form of `YYYY-MM-DD`.
 
-The version parameter must be present in the URL.
+The version must comply with the format YYYY-MM-DD. For single-digit months or dates, such as January 1st, the version should look like 2019-01-01.The version parameter must be present in the URL. The version must 	be after 2019-01-01 and before the current date. For example, to get list VPCs, append the version at the end of the request `GET "/v1/vpcs?version=2019-01-01”`
 
 ## network_conflict
 **Message**: None
@@ -376,8 +377,6 @@ For further instructions to fix this problem, refer to the [API documentation](a
 **Message**: Please check whether the resource you are requesting exists.
 
 You referenced a resource that does not exist or one to which you do not have access.  Please review your request to ensure that you specified the proper IDs and references.
-
-This error may occur when you've tried to provision your VSI using a profile that is not supported, or tried to allocate another resource that is unavailable. For a list of available profiles, you can use the command `ibmcloud is instance-profiles`. 
 
 For further instructions to fix this problem, refer to the [API documentation](api-doc-wrapper.html){: new_window}. If this problem persists, [contact support](getting-help.html).
 
